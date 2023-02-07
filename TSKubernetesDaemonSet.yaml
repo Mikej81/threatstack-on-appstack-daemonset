@@ -39,7 +39,7 @@ spec:
           - name: THREATSTACK_SETUP_ARGS
             value: "--deploy-key <REPLACE_WITH_VALID_DEPLOY_KEY> --ruleset 'Base Rule Set, Docker Rule Set, Kubernetes Rule Set'"
           - name: THREATSTACK_CONFIG_ARGS
-            value: "enable_kubes 1 enable_kubes_master 1 log.level info enable_bpf_sensors 1"
+            value: "enable_kubes 1 enable_kubes_master 1 log.level info enable_bpf_sensors false"
         securityContext:
           privileged: false
           capabilities:
@@ -96,7 +96,7 @@ spec:
           - name: THREATSTACK_SETUP_ARGS
             value: "--deploy-key <REPLACE_WITH_VALID_DEPLOY_KEY> --ruleset 'Base Rule Set, Docker Rule Set, Kubernetes Rule Set'"
           - name: THREATSTACK_CONFIG_ARGS
-            value: "enable_kubes 1 log.level info enable_bpf_sensors 1"
+            value: "enable_kubes 1 log.level info enable_bpf_sensors false"
         securityContext:
           privileged: false
           capabilities:
